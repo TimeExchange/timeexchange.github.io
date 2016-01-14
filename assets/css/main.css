@@ -3478,7 +3478,8 @@
 			text-align: center;
 			text-transform: uppercase;
 			width: 16em;
-			z-index: 1;
+			z-index: 3;
+
 		}
 			#emailField{
 		    width: 40%;
@@ -3488,7 +3489,11 @@
 			#emailButton{
 				margin-top: 3%;
 			}
-
+			#hero-content {
+				padding: 20px;
+    		background-image: radial-gradient(ellipse, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 73%);
+		    z-index: 3;
+			}
 			#banner .more:after {
 				background-image: url("images/arrow.svg");
 				background-position: center;
@@ -3789,14 +3794,25 @@
 			}
 
 		}
+/* Video */
+	#bgVideo{
+		position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 2;
+    width: 100%;
+	}
+
+
 
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3814,10 +3830,10 @@
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=e28303f55080c5ec6f56c76cd6681999");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/homepage-hero-image.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
