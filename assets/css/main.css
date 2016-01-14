@@ -3850,6 +3850,7 @@
 		-ms-transition: all 0.5s ease, opacity 0.5s ease;
 		transition: all 0.5s ease, opacity 0.5s ease;
 		text-align: center;
+		z-index: 5;
     top: -100px;
     position: fixed;
     width: 100%;
