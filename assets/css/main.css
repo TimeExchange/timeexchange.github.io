@@ -3490,7 +3490,6 @@
 				margin-top: 3%;
 			}
 			#hero-content {
-				padding: 20px;
     		background-image: radial-gradient(ellipse, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 73%);
 		    z-index: 3;
 			}
@@ -3854,6 +3853,7 @@
     top: -100px;
     position: fixed;
     width: 100%;
+    box-shadow: 2px 0 6px 1px rgba(0,0,0,0.7);
 	}
 	#normal {
     background-color: #21b2a6;
@@ -3864,6 +3864,7 @@
 
 	#message > p {
 		font-size: 1.1em;
+		padding: 7px 0;
 		margin:0;
 	}
 
