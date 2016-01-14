@@ -3835,9 +3835,10 @@
 		@media screen and (max-width: 736px) {
 
 			#bgVideo{
-				width: auto;
-				left: -74vw;
-	  		height: 100vh   !important;
+				display: none;
+				/*width: auto;*/
+				/*left: -74vw;*/
+	  		/*height: 100vh   !important;*/
 			}
 
 		}
