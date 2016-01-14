@@ -10,8 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- <link rel="stylesheet" type="text/css" class="ui" href="semantic/semantic.css"> -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" class="ui" href="//oss.maxcdn.com/semantic-ui/2.1.8/components/component-name.min.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -19,6 +19,10 @@
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
+				<!-- Message -->
+					<div id="message">
+						<p id="messageContent">You've successfully subscribed.</p>
+					</div>
 
 				<!-- Header -->
 					<!-- <header id="header" class="alt">
@@ -48,14 +52,14 @@
 							<p>技能交換時間<br />
 							時間交換技能<br />
 							快來累積你的時間貨幣吧！</p>
-							<div class="ui search" id="emailField">
+							<div class="ui form segment error" id="emailField">
 							  <div class="ui icon input">
-							    <input class="prompt" type="text" placeholder="Enter email to keep update">
-							    <button class="ui button" id="emailButton">
+							    <!-- <input class="prompt" type="text" placeholder="Enter email to keep update"> -->
+							    <input type="email" class="prompt" placeholder="Enter email to keep update" aria-label="You Email" aria-describedby="i.desc.1641455653 i.err.1641455653" id="email">
+							    <button class="ui button" id="emailButton" onclick="validateEmail()">
 									  Follow Us
 									</button>
 							  </div>
-							  <div class="results"></div>
 							</div>
 							<!-- <div class="ui form">
 							  <div class="field">
@@ -188,7 +192,47 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="assets/js/form.js"></script>
 			<script type="text/javascript">
+				function validateEmail(){
+					var input = $('#email').val();
+					var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+					if (regex.test(input)){
+						postToGoogle();
+						$('#messageContent').text("You've successfully subscribed.");
+						$('#message').css('background-color','#21b2a6');
+					} else {
+						$('#messageContent').text("Please enter valid email.");
+						$('#message').css('background-color','#EC6D22');
+					}
+					$('#message').addClass('appear');
+					setTimeout(function(){
+						$('#message').removeClass('appear');
+						$('#email').val(null);
+					},3000);
+				}
+
+				function postToGoogle() {
+				    var email = $('#email').val();
+
+				    $.ajax({
+						    url: "https://docs.google.com/forms/d/1BO17gREGajLBDzOy1ztkplk9s2J0eGI8alaneHq8IBk/formResponse",
+						    data: {"entry.1325054594": email},
+						    type: "POST",
+						    dataType: "xml",
+						    statusCode: {
+						        0: function() {
+						            //Success message
+						            console.log('0');
+						        },
+						        200: function() {
+						            //Success Message
+						            console.log('200');
+						        }
+						    }
+						});
+				}
+
 				$(function() {
 				  $('a[href*=#]:not([href=#])').click(function() {
 				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
