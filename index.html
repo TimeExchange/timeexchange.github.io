@@ -7,6 +7,7 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!-- <link rel="stylesheet" type="text/css" class="ui" href="semantic/semantic.css"> -->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -43,7 +44,7 @@
 				<!-- Banner -->
 
 					<section id="banner">
-						<video id="bgVideo" autoplay poster="images/homepage-hero-image.jpg" loop="loop">
+						<video id="bgVideo" autoplay controls poster="images/homepage-hero-image.jpg" loop="loop" id="video">
 						    <source src="assets/videos/MP4/homepage-hero-video.mp4" type="video/mp4"/>
 						    <!-- <source src="assets/video/MP4/homepage-hero-video.webm" type="video/webm"/> -->
 						    <!-- <source src="assets/video/MP4/homepage-hero-video.ogv" type="video/ogg"/>     -->
@@ -194,7 +195,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script type="assets/js/form.js"></script>
+			<script src="http://vjs.zencdn.net/5.4.6/video.js"></script>
 			<script type="text/javascript">
 				function validateEmail(){
 					var input = $('#email').val();
@@ -213,7 +214,9 @@
 						$('#email').val(null);
 					},3000);
 				}
-
+				videojs('#video').ready(function() {
+				    this.play();
+				});
 				function postToGoogle() {
 				    var email = $('#email').val();
 
