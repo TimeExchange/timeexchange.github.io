@@ -44,7 +44,7 @@
 				<!-- Banner -->
 
 					<section id="banner">
-						<video id="bgVideo" autoplay controls poster="images/homepage-hero-image.jpg" loop="loop" id="video">
+						<video id="bgVideo" autoplay controls poster="images/homepage-hero-image.jpg" loop="loop">
 						    <source src="assets/videos/MP4/homepage-hero-video.mp4" type="video/mp4"/>
 						    <!-- <source src="assets/video/MP4/homepage-hero-video.webm" type="video/webm"/> -->
 						    <!-- <source src="assets/video/MP4/homepage-hero-video.ogv" type="video/ogg"/>     -->
@@ -214,7 +214,7 @@
 						$('#email').val(null);
 					},3000);
 				}
-				videojs('video').ready(function() {
+				videojs('bgVideo').ready(function() {
 				    this.play();
 				});
 				function postToGoogle() {
