@@ -214,7 +214,11 @@
 						$('#email').val(null);
 					},3000);
 				}
-
+				$('input[type=email]').on('keydown', function(e) {
+				    if (e.which == 13) {
+				        validateEmail();
+				    }
+				});
 				function postToGoogle() {
 				    var email = $('#email').val();
 
