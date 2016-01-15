@@ -3802,7 +3802,6 @@
     top: 0;
     left: 0;
     border: 0;
-    z-index: 2;
     /*width: 100%;*/
 	}
 		@media screen and (max-width: 1840px) {
