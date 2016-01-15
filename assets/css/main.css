@@ -3490,7 +3490,7 @@
 				margin-top: 5%;
 			}
 			#hero-content {
-    		background-image: radial-gradient(ellipse, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 73%);
+    		/*background-image: radial-gradient(ellipse, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 73%);*/
 		    z-index: 3;
 			}
 			#banner .more:after {
@@ -3794,13 +3794,24 @@
 
 		}
 /* Video */
-	#bgVideo{
+
+	#videoWrap {
 		position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: brightness(0.7) sepia(0.3) blur(0.2px);
+	  -moz-filter: brightness(0.7) sepia(0.3) blur(0.2px);
+	  -ms-filter: brightness(0.7) sepia(0.3) blur(0.2px);
+	  -o-filter: brightness(0.7) sepia(0.3) blur(0.2px);
+    filter: brightness(0.7) sepia(0.3) blur(0.2px);
+	}
+
+	#bgVideo{
+		position: relative;
 		width: 100%;
     z-index: 2;
 		/*height: 100vh   !important;*/
-    top: 0;
-    left: 0;
+
     border: 0;
     /*width: 100%;*/
 	}
