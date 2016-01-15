@@ -3797,7 +3797,7 @@
 	#bgVideo{
 		position: absolute;
 		width: 100%;
-    z-index: -1;
+    z-index: 2;
 		/*height: 100vh   !important;*/
     top: 0;
     left: 0;
@@ -3807,8 +3807,8 @@
 		@media screen and (max-width: 1840px) {
 
 			#bgVideo{
-				width: auto;
-	  		height: 100vh   !important;
+				width: 130vw;
+	  		/*height: 100vh   !important;*/
 			}
 
 		}
@@ -3816,8 +3816,8 @@
 		@media screen and (max-width: 1280px) {
 
 			#bgVideo{
-				width: auto;
-	  		height: 100vh   !important;
+				width: 130vw;
+	  		/*height: 100vh   !important;*/
 			}
 
 		}
@@ -3826,7 +3826,7 @@
 
 			#bgVideo{
 				width: auto;
-				left: -34vw;
+				/*left: -34vw;*/
 	  		height: 100vh   !important;
 			}
 
