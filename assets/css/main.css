@@ -8,8 +8,15 @@
 */
 /*Added by KJ*/
 .GIF {
-	position: relative;
-	right:50;
+	background-image: url('../../images/720.gif');
+	background-size: cover;
+	background-position-y: 30%;
+	flex:1;
+	min-height: 600px
+}
+.flex {
+	display: flex;
+	padding: 0 !important;
 }
 /* Reset */
 
