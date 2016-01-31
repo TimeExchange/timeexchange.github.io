@@ -3473,10 +3473,10 @@
 			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
 			-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
 			transition: transform 0.75s ease, opacity 0.75s ease;
-			-moz-transition-delay: 3.5s;
-			-webkit-transition-delay: 3.5s;
-			-ms-transition-delay: 3.5s;
-			transition-delay: 3.5s;
+			-moz-transition-delay: 1.2s;
+			-webkit-transition-delay: 1.2s;
+			-ms-transition-delay: 1.2s;
+			transition-delay: 1.2s;
 			-moz-transform: translateY(0);
 			-webkit-transform: translateY(0);
 			-ms-transform: translateY(0);
@@ -3512,10 +3512,14 @@
 		    z-index: 3;
 			}
 			#banner .more:after {
-				background-image: url("images/arrow.svg");
+				background-image: url("../../images/arrow.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
+		    filter: invert(100%);
+		    -webkit-filter: invert(100%);
+		    -moz-filter: invert(100%);
+		    -ms-filter: invert(100%);
 				bottom: 4em;
 				content: '';
 				display: block;
@@ -3531,10 +3535,10 @@
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
 			pointer-events: none;
-			-moz-transition: opacity 2s ease-in-out;
-			-webkit-transition: opacity 2s ease-in-out;
-			-ms-transition: opacity 2s ease-in-out;
-			transition: opacity 2s ease-in-out;
+			-moz-transition: opacity 1s ease-in-out;
+			-webkit-transition: opacity 1s ease-in-out;
+			-ms-transition: opacity 1s ease-in-out;
+			transition: opacity 1s ease-in-out;
 			-moz-transition-delay: 0.1s;
 			-webkit-transition-delay: 0.1s;
 			-ms-transition-delay: 0.1s;
