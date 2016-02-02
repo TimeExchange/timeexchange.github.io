@@ -186,14 +186,22 @@
 						postToGoogle();
 						$('#messageContent').text("You've successfully subscribed.");
 						$('#message').css('background-color','#21b2a6');
+						$('#email').val(null);
 					} else {
 						$('#messageContent').text("Please enter valid email.");
 						$('#message').css('background-color','#EC6D22');
 					}
 					$('#message').addClass('appear');
+					$('#email').off('keydown');
+					$('#emailButton').prop('disabled', true);
 					setTimeout(function(){
 						$('#message').removeClass('appear');
-						$('#email').val(null);
+						$('#email').on('keydown', function (e) {
+								if (e.which == 13) {
+										validateEmail();
+								}
+						});
+						$('#emailButton').prop('disabled', false);
 					},3000);
 				}
 				$('input[type=email]').on('keydown', function(e) {
